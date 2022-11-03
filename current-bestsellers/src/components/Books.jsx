@@ -25,12 +25,18 @@ export default function Books () {
         return <h2> Loading please wait... </h2>
     } else {
         return (
+        
             books.map((book) => (
+                <div className="book-grid">
                 <div className="book-card" key={book.isbns[0].isbn10}>
+                    <img src={book.book_image} alt="cover" className="cover-thumb"/>
                     <p>Ranked #{book.rank} this week </p>
                     <h3 className="book-title">{book.title}</h3>
                     <h4>by: {book.author}</h4>
-                </div> ))
+                </div>
+                </div>
+                ))
+            
         )
     }
 }
