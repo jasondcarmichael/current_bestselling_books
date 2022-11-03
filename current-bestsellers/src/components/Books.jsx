@@ -13,30 +13,32 @@ export default function Books () {
             console.log(response.data.results.books)
             setBooks(response.data.results.books)
         }
-
         getData()
-
     }, [])
 
     console.log(books)
-
 
     if (!books) {
         return <h2> Loading please wait... </h2>
     } else {
         return (
-        
-            books.map((book) => (
-                <div className="book-grid">
-                <div className="book-card" key={book.isbns[0].isbn10}>
-                    <img src={book.book_image} alt="cover" className="cover-thumb"/>
-                    <p>Ranked #{book.rank} this week </p>
-                    <h3 className="book-title">{book.title}</h3>
-                    <h4>by: {book.author}</h4>
-                </div>
-                </div>
-                ))
-            
-        )
+            <div><h1> Fiction Bestsellers </h1>
+            <div className="book-container">
+                
+                {
+                    books.map((book) => (
+                        <div className="book-card" key={book.isbns[0].isbn10}>
+                            <p>Ranked #{book.rank} this week </p>
+                            <img src={book.book_image} alt="cover" className="cover-thumb"/>
+                            <h3 className="book-title">{book.title}</h3>
+                            <p>by: {book.author}</p>
+                            <button> Learn more </button>
+                        </div>
+                    ))
+                }
+
+            </div>
+            </div>
+        )     
     }
 }

@@ -2,29 +2,28 @@
   text-align: center;
 }
 
-.App-main {
+.book-container {
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   justify-content: space-evenly;
 }
 
-/* .book-grid {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  
-  
-} */
-
 .book-card {
-  border: 1px solid black;
+  border: 1px solid lightslategray;
+  border-radius: 4px;
+  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.3);
   margin: 10px;
   padding: 5px;
-  height: 350px;
-  max-width: 400px;
-
+  height: 400px;
+  width: 300px;
 }
 
 .cover-thumb {
   max-height: 200px;
+}
+
+.nav {
+  padding: 10px;
+  margin: 10px;
+
 }
