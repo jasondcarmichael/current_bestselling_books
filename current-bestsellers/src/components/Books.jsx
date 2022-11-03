@@ -22,13 +22,14 @@ export default function Books () {
 
 
     if (!books) {
-        return <h2> Loading please wait </h2>
+        return <h2> Loading please wait... </h2>
     } else {
         return (
             books.map((book) => (
-                <div key={book.isbn}>
-                    <h3>Title: {book.title}</h3>
-                    <h4>Author: {book.author}</h4>
+                <div className="book-card" key={book.isbns[0].isbn10}>
+                    <p>Ranked #{book.rank} this week </p>
+                    <h3 className="book-title">{book.title}</h3>
+                    <h4>by: {book.author}</h4>
                 </div> ))
         )
     }
