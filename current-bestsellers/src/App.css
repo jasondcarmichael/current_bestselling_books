@@ -20,9 +20,13 @@
 
 .cover-thumb {
   max-height: 200px;
+  border-radius: 3px;
 }
 
 .nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: right;
   padding: 10px;
   margin: 10px;
 
