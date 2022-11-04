@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { BASE_URL } from '../globals'
+import { useNavigate } from 'react-router-dom'
 
 export default function Books () {
 
     const [books, setBooks] = useState([])
-
 
     useEffect(()=> {
         const getData = async () => {
@@ -17,6 +17,12 @@ export default function Books () {
     }, [])
 
     console.log(books)
+
+    let navigate = useNavigate()
+
+    const showBook = (book) => {
+        navigate(`${book.isbns[0].isbn10}`)
+    }
 
     if (!books) {
         return <h2> Loading please wait... </h2>
@@ -32,7 +38,7 @@ export default function Books () {
                             <img src={book.book_image} alt="cover" className="cover-thumb"/>
                             <h3 className="book-title">{book.title}</h3>
                             <p>by: {book.author}</p>
-                            <button> Learn more </button>
+                            <button onClick={() => showBook(book)} key={book.id}> Learn more </button>
                         </div>
                     ))
                 }
