@@ -38,7 +38,7 @@ export default function Books () {
                             <img src={book.book_image} alt="cover" className="cover-thumb"/>
                             <h3 className="book-title">{book.title}</h3>
                             <p>by: {book.author}</p>
-                            <button onClick={() => showBook(book)} key={book.id}> Learn more </button>
+                            <button onClick={() => showBook(book)} key={book.isbns[0].isbn10}> Learn more </button>
                         </div>
                     ))
                 }

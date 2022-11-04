@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 
 export default function BookDetails (props) {
 
-
     // pass down data for the specified Book id(isbn#)
 
     let { id } = useParams()
@@ -14,14 +13,14 @@ export default function BookDetails (props) {
     useEffect(() => {
         let selectedBook = props.books.find(
             (book) => book.id === parseInt(id)
+            
         )
         setBook(selectedBook)
+        console.log(selectedBook)
     }, [props.books, id])
 
+   
 
-    // identify all book details to pull
-
-    // make elements for all details
 
     // Render all data
     
