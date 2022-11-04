@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { BASE_URL } from '../globals'
 import { useNavigate } from 'react-router-dom'
+import BookDetails from './BookDetails'
 
 export default function Books () {
 
@@ -21,8 +22,11 @@ export default function Books () {
     let navigate = useNavigate()
 
     const showBook = (book) => {
-        navigate(`${book.isbns[0].isbn10}`)
+        let bookIsbn = book.isbns[0].isbn10
+        navigate(`${bookIsbn}`)
+        console.log(bookIsbn)
     }
+    
 
     if (!books) {
         return <h2> Loading please wait... </h2>
@@ -39,6 +43,7 @@ export default function Books () {
                             <h3 className="book-title">{book.title}</h3>
                             <p>by: {book.author}</p>
                             <button onClick={() => showBook(book)} key={book.isbns[0].isbn10}> Learn more </button>
+                            {/* <BookDetails book={...book}/> */}
                         </div>
                     ))
                 }

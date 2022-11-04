@@ -3,13 +3,14 @@ import Home from './Home'
 import Books from './Books'
 import BookDetails from './BookDetails'
 
-export default function Main (props) {
+export default function Main () {
+   
     return (
         <div>
             <Routes>
                 <Route path="/" element={<Home/>}/>
                 <Route path="/books" element={<Books/>}/>
-                <Route path="/books/:id" element={ <BookDetails books={props.books} />} />
+                <Route path="/books/:bookIsbn" element={ <BookDetails />} />
 
 
             </Routes>
