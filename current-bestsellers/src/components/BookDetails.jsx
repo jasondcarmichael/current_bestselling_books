@@ -8,6 +8,8 @@ export default function BookDetails (props) {
 
     let { id } = useParams()
 
+    
+
     const [book, setBook] = useState('')
 
     useEffect(() => {
