@@ -22,9 +22,9 @@ export default function Books () {
     let navigate = useNavigate()
 
     const showBook = (book) => {
-        let bookIsbn = book.isbns[0].isbn10
-        navigate(`${bookIsbn}`)
-        console.log(bookIsbn)
+       
+        navigate(`${book.primary_isbn13}`)
+        console.log(navigate)
     }
     
 
@@ -37,13 +37,16 @@ export default function Books () {
                 
                 {
                     books.map((book) => (
-                        <div className="book-card" key={book.isbns[0].isbn10}>
+                        <div>
+                        <div className="book-card" onClick={() => showBook(book)} key={book.primary_isbn13}>
                             <p>Ranked #{book.rank} this week </p>
                             <img src={book.book_image} alt="cover" className="cover-thumb"/>
                             <h3 className="book-title">{book.title}</h3>
                             <p>by: {book.author}</p>
-                            <button onClick={() => showBook(book)} key={book.isbns[0].isbn10}> Learn more </button>
-                            {/* <BookDetails book={...book}/> */}
+                            {/* <button onClick={() => showBook(book)} key={book.primary_isbn13} type="button"> Learn more </button> */}
+                            
+                        </div>
+                            <BookDetails key={book.primary_isbn10} books={books} />
                         </div>
                     ))
                 }

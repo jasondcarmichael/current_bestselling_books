@@ -10,7 +10,7 @@ export default function Main () {
             <Routes>
                 <Route path="/" element={<Home/>}/>
                 <Route path="/books" element={<Books/>}/>
-                <Route path="/books/:bookIsbn" element={ <BookDetails />} />
+                <Route path="/books/:id" element={ <BookDetails />} />
 
 
             </Routes>
