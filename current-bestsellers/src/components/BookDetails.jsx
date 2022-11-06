@@ -6,51 +6,46 @@ import { Link } from 'react-router-dom'
 export default function BookDetails (props) {
     console.log(props)
 
-    const [bookInfo, setBookInfo] = useState([])
-    
-    // let { index } = useParams()
+    let { isbn13 } = useParams()
+    console.log(isbn13)
+
+    const [book, setBook] = useState([])
+
+    // const [selectedBook, setSelectedBook] = useState(null)
+
     // useEffect(() => {
-    //     let selectedBookInfo = props.books[index]
-    //     setBookInfo(selectedBookInfo)
-    //     console.log(setBookInfo)
-    // }, [props.books, index])
-
-
-
-
-    let { primary_isbn13 } = useParams()
-    console.log(primary_isbn13)
-
-    
+    //     let bookId = book.primary_isbn13
+    //     let selectedBook = bookId
+    //     setSelectedBook(selectedBook)
+    // }, [])
 
     useEffect(() => {
-        let selectedBookInfo = props.books.get(
-         (bookInfo) => bookInfo.primary_isbn13 === parseInt(primary_isbn13)
+        let selectedBook = props.books.find(
+         (book) => book.primary_isbn13 === isbn13
          ) 
-
-        setBookInfo(selectedBookInfo)
-        console.log(setBookInfo)
-    }, [props.books, primary_isbn13])
+        setBook(selectedBook)
+        console.log(setBook)
+    }, [book, isbn13])
 
     
-    return bookInfo ? (
+    return book ? (
         <div className="detail">
         <div className="detail-header">
-          <img src={bookInfo.book_image} alt={bookInfo.title} />
+          <img src={book.book_image} alt={book.title} />
           <div style={{minWidth: '30em', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-            <h1>{bookInfo.title}</h1>
+            <h1>{book.title}</h1>
           </div> 
         </div>
         <div className="info-wrapper">
           <div style={{display: 'flex', justifyContent: 'space-between'}}>
-            <h3>By {bookInfo.author}</h3>
+            <h3>By {book.author}</h3>
           </div>
-          <p>{bookInfo.description}</p>
+          <p>{book.description}</p>
         </div>
         <div>
-            <p>Published by {bookInfo.publisher}</p>
-            <p>Publication date: {bookInfo.published_date}</p>
-            <p>ISBN: {bookInfo.primary_isbn13}</p>
+            <p>Published by {book.publisher}</p>
+            <p>Publication date: {book.published_date}</p>
+            <p>ISBN: {book.primary_isbn13}</p>
 
         </div>
         <button>
