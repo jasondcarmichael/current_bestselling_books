@@ -6,6 +6,7 @@ import Home from './Home'
 import Books from './Books'
 import BookDetails from './BookDetails'
 import Nonfiction from './Nonfiction'
+import NonfictionDetails from './NonfictionDetails'
 
 
 export default function Main () {
@@ -39,8 +40,9 @@ export default function Main () {
             <Routes>
                 <Route path="/" element={<Home/>}/>
                 <Route path="/books" element={<Books books={books}/>} />
-                <Route path="/books/:isbn13" element={ <BookDetails books={books}/>} />
+                <Route path="/books/:isbn13" element={ <BookDetails books={books} />} />
                 <Route path="/nonfiction" element={<Nonfiction nonfiction={nonfiction}/>} />
+                <Route path="/nonfiction/:isbn13" element={ <NonfictionDetails nonfiction={nonfiction}/>} />
         
 
 

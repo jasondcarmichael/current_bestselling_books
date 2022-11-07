@@ -1,4 +1,13 @@
+import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+
 export default function Nonfiction (props) {    
+
+    let navigate = useNavigate()
+
+    const showNonfiction = (book) => {
+        navigate(`${book.primary_isbn13}`)
+    }
     
     if (!props.nonfiction) {
         return <h2> Loading please wait... </h2>
@@ -9,13 +18,13 @@ export default function Nonfiction (props) {
                 
                 {
                     props.nonfiction.map((book, index) => (
-                        <div className="book-card" key={index}>
+                        <div className="book-card" onClick={() => showNonfiction(book)} key={index}>
 
                             <p>Ranked #{book.rank} this week </p>
                             <img src={book.book_image} alt="cover" className="cover-thumb"/>
                             <h3 className="book-title">{book.title}</h3>
                             <p>by: {book.author}</p>
-                            {/* <Link to={`/books/${book.primary_isbn13}`}>View details</Link> */}
+                            <Link to={`/nonfiction/${book.primary_isbn13}`}>View details</Link>
                         
                            
                         </div>
