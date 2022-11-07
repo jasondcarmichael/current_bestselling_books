@@ -6,6 +6,7 @@ export default function Nav () {
             <Link to="/"> Home </Link>
             <Link to="/books"> Fiction </Link>
             <Link to="/nonfiction"> Nonfiction </Link>
+            <Link to="/childrensbooks"> Children's Books </Link>
 
         </div>
     )
