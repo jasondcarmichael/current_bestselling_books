@@ -29,7 +29,12 @@
 .App-main {
   flex-grow: 1;
   margin-top: 15%;
+  margin-bottom: 5%;
   padding-top: 30px;
+}
+
+h1 {
+  font-size: 36px;
 }
 
 .book-container {

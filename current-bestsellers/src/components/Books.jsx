@@ -6,7 +6,10 @@ export default function Books (props) {
         return <h2> Loading please wait... </h2>
     } else {
         return (
-            <div><h1> Fiction Bestsellers </h1>
+            <div>
+                <Link to="/home" className="back-btn"> ◁ Home </Link>
+
+                <h1> Fiction Bestsellers </h1>
             <div className="book-container">
                 
                 {
