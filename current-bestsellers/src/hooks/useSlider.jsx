@@ -15,6 +15,7 @@ const startSlider = () => {
 }
 
 const handleSlide = slide => {
+    url(`${images[slide -1].src}`)
     slideText.current.innerHTML = images[slide -1].text
     animateSlide(slideImage)
 }
@@ -53,3 +54,4 @@ const goToNextSlide = () => {
         goToPreviousSlide, goToNextSlide
     )
 }
+

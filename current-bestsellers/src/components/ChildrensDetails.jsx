@@ -24,27 +24,23 @@ export default function ChildrensDetails (props) {
         <div className="detail">
           <div className="detail-header">
             <img src={book.book_image} alt={book.title} />
-            <div style={{minWidth: '30em', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-            <h1><em>{book.title}</em></h1>
-          </div> 
-        </div>
+          </div>
+
           <div className="info-wrapper">
-            <div style={{display: 'flex', flexDirection:'column', justifyContent: 'space-between'}}>
-              <h3>By {book.author}</h3>
-              <p>Ranked #{book.rank} this week</p>
+            <h1><em>{book.title}</em></h1>
+            <h3>By {book.author}</h3>
+            <p>Ranked #{book.rank} this week</p>
+            <p><b>Summary:</b> {book.description}</p>
+        
+            <div className="pub-info">
+              <p><b>Rank Last Week:</b> {book.rank_last_week} </p>
+              <p><b>Weeks on the List:</b> {book.weeks_on_list} </p>
+              <p><b>Published by:</b> {book.publisher}</p>
+              <p><b>ISBN #:</b> {book.primary_isbn13}</p>
+              <Link to="/childrensbooks" className="back-btn"> ◁ Back to Books </Link>
+            </div>
           </div>
-            <p>{book.description}</p>
-          </div>
-        <div>
-          <p><b>Rank Last Week:</b> {book.rank_last_week} </p>
-          <p><b>Weeks on the List:</b> {book.weeks_on_list} </p>
-          <p><b>Published by:</b> {book.publisher}</p>
-          <p><b>ISBN #:</b> {book.primary_isbn13}</p>
         </div>
-        <button>
-          <Link to="/childrensbooks"> ◁ Back to Books </Link>
-        </button>
-      </div>
     ) : null;
 
 }

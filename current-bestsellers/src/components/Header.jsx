@@ -4,7 +4,7 @@ export default function Header () {
 
     return (
         <div>
-            <h2> Current Bestsellers </h2>
+            <h1> Current NYT Bestsellers </h1>
             <Nav />
         </div>
     )
