@@ -23,7 +23,7 @@ export default function ChildrensBooks (props) {
                             <img src={book.book_image} alt="cover" className="cover-thumb"/>
                             <h3 className="book-title">{book.title}</h3>
                             <p>by: {book.author}</p>
-                            <Link to={`/nonfiction/${book.primary_isbn13}`}>View details</Link>
+                            <p> View details ▷ </p>
                         
                            
                         </div>

@@ -42,7 +42,7 @@ export default function NonfictionDetails (props) {
           <p><b>ISBN #:</b> {book.primary_isbn13}</p>
         </div>
         <button>
-          <Link to="/books"> Back to Books </Link>
+          <Link to="/nonfiction"> ◁ Back to Books </Link>
         </button>
       </div>
     ) : null;
