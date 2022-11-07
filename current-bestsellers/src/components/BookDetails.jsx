@@ -11,13 +11,6 @@ export default function BookDetails (props) {
 
     const [book, setBook] = useState([])
 
-    // const [selectedBook, setSelectedBook] = useState(null)
-
-    // useEffect(() => {
-    //     let bookId = book.primary_isbn13
-    //     let selectedBook = bookId
-    //     setSelectedBook(selectedBook)
-    // }, [])
 
     useEffect(() => {
         let selectedBook = props.books.find(
@@ -30,23 +23,24 @@ export default function BookDetails (props) {
     
     return book ? (
         <div className="detail">
-        <div className="detail-header">
-          <img src={book.book_image} alt={book.title} />
-          <div style={{minWidth: '30em', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-            <h1>{book.title}</h1>
+          <div className="detail-header">
+            <img src={book.book_image} alt={book.title} />
+            <div style={{minWidth: '30em', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+            <h1><em>{book.title}</em></h1>
           </div> 
         </div>
-        <div className="info-wrapper">
-          <div style={{display: 'flex', justifyContent: 'space-between'}}>
-            <h3>By {book.author}</h3>
+          <div className="info-wrapper">
+            <div style={{display: 'flex', flexDirection:'column', justifyContent: 'space-between'}}>
+              <h3>By {book.author}</h3>
+              <p>Ranked #{book.rank} this week</p>
           </div>
-          <p>{book.description}</p>
-        </div>
+            <p>{book.description}</p>
+          </div>
         <div>
-            <p>Published by {book.publisher}</p>
-            <p>Publication date: {book.published_date}</p>
-            <p>ISBN: {book.primary_isbn13}</p>
-
+          <p><b>Rank Last Week:</b> {book.rank_last_week} </p>
+          <p><b>Weeks on the List:</b> {book.weeks_on_list} </p>
+          <p><b>Published by:</b> {book.publisher}</p>
+          <p><b>ISBN #:</b> {book.primary_isbn13}</p>
         </div>
         <button>
           <Link to="/books"> Back to Books </Link>
