@@ -21,11 +21,11 @@ export default function ChildrensBooks (props) {
                     props.pictureBooks.map((book, index) => (
                         <div className="book-card" onClick={() => showPictureBooks (book)} key={index}>
 
-                            <p>Ranked #{book.rank} this week </p>
+                            <h3>Ranked #{book.rank} this week </h3>
                             <img src={book.book_image} alt="cover" className="cover-thumb"/>
                             <h3 className="book-title">{book.title}</h3>
                             <p>by: {book.author}</p>
-                            <p> View details ▷ </p>
+                            <p className="view-details"> View details ▷ </p>
                         
                            
                         </div>
