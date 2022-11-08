@@ -13,27 +13,30 @@ export default function ChildrensBooks (props) {
     } else {
         return (
             <div>
-                <Link to="/home" className="back-btn"> ◁ Home </Link>
+                <Link to="/" className="back-btn"> ◁ Home </Link>
                 <h1> Children's Picture Book Bestsellers </h1>
-            <div className="book-container">
+            
+                <div className="book-container">
                 
                 {
                     props.pictureBooks.map((book, index) => (
                         <div className="book-card" onClick={() => showPictureBooks (book)} key={index}>
 
                             <h3>Ranked #{book.rank} this week </h3>
+
                             <img src={book.book_image} alt="cover" className="cover-thumb"/>
+
                             <h3 className="book-title">{book.title}</h3>
+
                             <p>by: {book.author}</p>
+                            
                             <p className="view-details"> View details ▷ </p>
                         
-                           
-                        </div>
-                          
+                        </div>    
                     ))
                 }
-
-            </div>
+                
+                </div>
             </div>
         )     
     }

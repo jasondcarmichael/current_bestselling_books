@@ -15,8 +15,18 @@
   background: black;
   color: white;
   z-index: 10000;
-  border-bottom: 4px solid gray;
+  border-bottom: 3px solid gray;
   opacity: 90%;
+}
+
+.App-header h1 {
+  margin: 0px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  letter-spacing: 2px;
+  font-size: 40px;
+  border-bottom: 1px solid white;
+
 }
 
 .App-footer {
@@ -34,11 +44,12 @@
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 36px;
+  font-family: 'Cormorant Garamond', serif;
 }
 
 h5 {
-  font-family: 'Proza Libre', sans-serif;
+  font-family: 'Jost', sans-serif;
 }
 
 p {
@@ -63,7 +74,7 @@ p {
 }
 
 .carousel-container {
-  margin-top: 25%;
+  margin-top: 5%;
 }
 
 .cover-thumb {
@@ -79,10 +90,11 @@ p {
 
 .nav a {
   text-decoration: none;
-  font-weight: bold;
-  font-family: 'Proza Libre', sans-serif;
+  font-family: 'Jost', sans-serif;
+  font-size: 13px;
+  letter-spacing: 2px;
   color: white;
-  padding: 14px 30px;
+  padding: 10px 30px;
   transition: background-color .25s, box-shadow .15s;
 
 }
@@ -90,16 +102,15 @@ p {
 .nav a:hover {
   background-color: white;
   color: black;
-  box-shadow: 0px 4px 0px 0px gray;
+  box-shadow: 0px 3px 0px 0px gray;
 }
 
 .detail {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  /* background-color: lightslategray; */
   padding: 15px;
-  align-items: ;
+  /* align-items: ; */
 }
 
 .detail img {
@@ -124,7 +135,7 @@ p {
 
 .back-btn {
   text-decoration: none;
-  font-family: 'Proza Libre', sans-serif;
+  font-family: 'Jost', sans-serif;
   font-size: 14px;
   color: blue;
   margin-top: 15px;
@@ -143,7 +154,7 @@ h5 {
 }
 
 .view-details {
-  font-family: 'Proza Libre', sans-serif;
+  font-family: 'Jost', sans-serif;
   text-decoration: none;
   color: blue;
   font-size: 14px;
