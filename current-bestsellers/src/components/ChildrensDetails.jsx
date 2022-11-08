@@ -28,7 +28,7 @@ export default function ChildrensDetails (props) {
 
           <div className="info-wrapper">
             <h1><em>{book.title}</em></h1>
-            <h3>By {book.author}</h3>
+            <h3>{book.contributor}</h3>
             <p>Ranked #{book.rank} this week</p>
             <p><b>Summary:</b> {book.description}</p>
         

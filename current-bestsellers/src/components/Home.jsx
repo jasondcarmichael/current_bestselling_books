@@ -45,43 +45,43 @@ export default function Home (props) {
     return fiction1, fiction2a, fiction3a, nonfiction1, nonfiction2a, nonfiction3a, childrens1, childrens2a, childrens3a ? (
         <div className="carousel-container"> 
             <Carousel cols={3} rows={1} gap={10} loop>
-                <Carousel.Item>
-                    <img width="100%" src={fiction1.book_image} />
+                <Carousel.Item className="carousel-item">
+                    <img width="90%" src={fiction1.book_image} />
                     {/* <h2>{fiction1.title}</h2> */}
                 </Carousel.Item>
 
-                <Carousel.Item>
-                    <img width="100%" src={fiction2a.book_image} />
+                <Carousel.Item className="carousel-item">
+                    <img width="90%" src={fiction2a.book_image} />
                     {/* <h2>{fiction1.title}</h2> */}
                 </Carousel.Item>
 
-                <Carousel.Item>
-                    <img width="100%" src={fiction3a.book_image} />
+                <Carousel.Item className="carousel-item">
+                    <img width="90%" src={fiction3a.book_image} />
                     {/* <h2>{fiction1.title}</h2> */}
                 </Carousel.Item>
 
-                <Carousel.Item>
-                    <img width="100%" src={nonfiction1.book_image} />
+                <Carousel.Item className="carousel-item">
+                    <img width="90%" src={nonfiction1.book_image} />
                 </Carousel.Item>
 
-                <Carousel.Item>
-                    <img width="100%" src={nonfiction2a.book_image} />
+                <Carousel.Item className="carousel-item">
+                    <img width="90%" src={nonfiction2a.book_image} />
                 </Carousel.Item>
 
-                <Carousel.Item>
-                    <img width="100%" src={nonfiction3a.book_image} />
+                <Carousel.Item className="carousel-item">
+                    <img width="90%" src={nonfiction3a.book_image} />
                 </Carousel.Item>
 
-                <Carousel.Item>
-                    <img width="100%" src={childrens1.book_image} />
+                <Carousel.Item className="carousel-item">
+                    <img width="90%" src={childrens1.book_image} />
                 </Carousel.Item>
 
-                <Carousel.Item>
-                    <img width="100%" src={childrens2a.book_image} />
+                <Carousel.Item className="carousel-item">
+                    <img width="90%" src={childrens2a.book_image} />
                 </Carousel.Item>
 
-                <Carousel.Item>
-                    <img width="100%" src={childrens3a.book_image} />
+                <Carousel.Item className="carousel-item">
+                    <img width="90%" src={childrens3a.book_image} />
                 </Carousel.Item>
 
             </Carousel>

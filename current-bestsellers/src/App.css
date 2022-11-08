@@ -3,7 +3,7 @@
   flex-direction: column;
   min-height: 100vh;
   text-align: center;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Cormorant', serif;
   
 }
 
@@ -44,7 +44,7 @@
 
 h1 {
   font-size: 36px;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Cormorant', serif;
 }
 
 h5 {
@@ -55,6 +55,15 @@ p {
   font-size: 18px;
 }
 
+/* .author {
+  font-family: 'Jost', sans-serif;
+} */
+
+.ranking {
+  font-family: 'Jost', sans-serif;
+  color: lightslategray;
+
+}
 
 .book-container {
   display: flex;
@@ -72,8 +81,18 @@ p {
   width: 300px;
 }
 
+
+
 .carousel-container {
-  margin-top: 5%;
+  /* margin-top: 5%; */
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.carousel-item {
+  align-items: baseline;
+  justify-content: center;
 }
 
 .cover-thumb {
@@ -164,8 +183,7 @@ h5 {
   /* bottom: 0; */
 }
 
-
-
 .view-details:hover {
   text-decoration: underline;
 }
+

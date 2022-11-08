@@ -16,13 +16,13 @@ export default function Books (props) {
                     props.books.map((book,index) => (
                         <div className="book-card" key={index}>
 
-                            <h3>Ranked #{book.rank} this week </h3>
+                            <h4 className="ranking">Ranked #{book.rank} this week </h4>
 
                             <img src={book.book_image} alt="cover" className="cover-thumb"/>
 
                             <h3 className="book-title">{book.title}</h3>
 
-                            <p>{book.author}</p>
+                            <p className="author">{book.author}</p>
 
                             <Link to={`/books/${book.primary_isbn13}`} className="view-details">View details ▻</Link>
                         </div>      

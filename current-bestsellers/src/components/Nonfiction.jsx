@@ -24,7 +24,7 @@ export default function Nonfiction (props) {
                         props.nonfiction.map((book, index) => (
                             <div className="book-card" onClick={() => showNonfiction(book)} key={index}>
 
-                                <h3>Ranked #{book.rank} this week </h3>
+                                <h4 className="ranking">Ranked #{book.rank} this week </h4>
 
                                 <img src={book.book_image} alt="cover" className="cover-thumb"/>
 
