@@ -13,8 +13,8 @@ export default function ChildrensBooks (props) {
     } else {
         return (
             <div>
-                <Link to="/" className="back-btn"> ◁ Home </Link>
-                <h1> Children's Picture Book Bestsellers </h1>
+                <Link to="/" className="back-btn" id="home-btn"> ◁ Home </Link>
+                <h1> Top 10 Children's Picture Books </h1>
             
                 <div className="book-container">
                 
@@ -28,9 +28,9 @@ export default function ChildrensBooks (props) {
 
                             <h3 className="book-title">{book.title}</h3>
 
-                            <p>by: {book.author}</p>
+                            <p>{book.author}</p>
                             
-                            <p className="view-details"> View details ▷ </p>
+                            <p className="view-details"> View details ▻ </p>
                         
                         </div>    
                     ))

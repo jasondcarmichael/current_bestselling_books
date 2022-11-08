@@ -7,8 +7,8 @@ export default function Books (props) {
     } else {
         return (
             <div>
-                <Link to="/" className="back-btn"> ◁ Home </Link>
-                <h1> Fiction Bestsellers </h1>
+                <Link to="/" className="back-btn" id="home-btn"> ◁ Home </Link>
+                <h1> Top 15 Fiction </h1>
             
                 <div className="book-container">
                 
@@ -22,9 +22,9 @@ export default function Books (props) {
 
                             <h3 className="book-title">{book.title}</h3>
 
-                            <p>by: {book.author}</p>
+                            <p>{book.author}</p>
 
-                            <Link to={`/books/${book.primary_isbn13}`} className="view-details">View details ▷</Link>
+                            <Link to={`/books/${book.primary_isbn13}`} className="view-details">View details ▻</Link>
                         </div>      
                     ))
                 }

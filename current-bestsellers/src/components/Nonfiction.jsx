@@ -14,10 +14,12 @@ export default function Nonfiction (props) {
     } else {
         return (
             <div>
-                <Link to="/" className="back-btn"> ◁ Home </Link>
-                <h1> Nonfiction Bestsellers </h1>
-
+                <Link to="/" className="back-btn" id="home-btn"> ◁ Home </Link>
+            
+                <h1> Top 15 Nonfiction </h1>
+            
                 <div className="book-container">
+                
                     {
                         props.nonfiction.map((book, index) => (
                             <div className="book-card" onClick={() => showNonfiction(book)} key={index}>
@@ -28,9 +30,9 @@ export default function Nonfiction (props) {
 
                                 <h3 className="book-title">{book.title}</h3>
 
-                                <p>by: {book.author}</p>
+                                <p>{book.author}</p>
 
-                                <p className="view-details">View details ▷ </p>
+                                <p className="view-details">View details ▻ </p>
         
                             </div>    
                         ))
