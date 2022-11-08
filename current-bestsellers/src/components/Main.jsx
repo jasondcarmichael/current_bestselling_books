@@ -52,9 +52,12 @@ export default function Main () {
     return (
         <div>
             <Routes>
-                <Route path="/" element={<Home/>}/>
+                <Route path="/" element={<Home books={books}
+                                                // nonfiction={nonfiction}
+                                                // pictureBooks={pictureBooks}
+                                                />}/>
                 <Route path="/books" element={<Books books={books}/>} />
-                <Route path="/books/:isbn13" element={ <BookDetails books={books} />} />
+                <Route path="/books/:isbn13" element={ <BookDetails books={books[0]} />} />
                 <Route path="/nonfiction" element={<Nonfiction nonfiction={nonfiction}/>} />
                 <Route path="/nonfiction/:isbn13" element={ <NonfictionDetails nonfiction={nonfiction}/>} />
                 <Route path="/childrensbooks" element={<ChildrensBooks pictureBooks={pictureBooks}/>} />
