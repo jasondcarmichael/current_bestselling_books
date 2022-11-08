@@ -38,7 +38,7 @@ export default function ChildrensDetails (props) {
               <p><b>Published by:</b> {book.publisher}</p>
               <p><b>ISBN #:</b> {book.primary_isbn13}</p>
               <Link to="/childrensbooks" className="back-btn"> ◁ Back to Books </Link>
-            </div>
+              </div>
           </div>
         </div>
     ) : null;
