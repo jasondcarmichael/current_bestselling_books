@@ -1,11 +1,12 @@
 # Current Bestselling Books
 
-## Description
-Front-end application built with React.js and third party API (New York Times Bestselling Books Lists). Visit the deployed site at https://current-bestsellers.surge.sh/<br>
-
-<br>
-
 <img src="current-bestsellers/assets/homepage.png" alt="homepage" > 
+
+## Description
+Front-end application built with React.js and third party API (New York Times Bestselling Books Lists).<br>
+<br>
+Visit the deployed site at https://current-bestsellers.surge.sh/
+
 
 ### Overview
 For those wanting something new to read or curious about what others are reading, this application allows them to discover what books are currently trending. The New York Times Best Seller's Lists pulled in this API call are published weekly, so the data refreshes each week, which ensures users will have the most current data. Users can select specific book lists based on interest to view the top books in that category according to rank. From ranked lists, users can select specific books to learn more about them. Users can determine whether or not a book on the list appeals to them and is worth their investment of time and money.
@@ -37,8 +38,8 @@ This project was built using the following technologies, libraries & frameworks:
 
 
 ## Credits & Acknowledgements
-The following resources were invaluable at different points in my project:<br>
-<br>
+The following resources were invaluable at different points in my project:
+
 * [Flexbox Nav Menu with Animation](https://codepen.io/mycarrera/pen/GpKwxO)
 
 * [Flexbox Footer](https://dev.to/akshay_rajput/keep-footer-at-bottom-of-page-using-flexbox-4a6f)
