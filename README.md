@@ -3,10 +3,10 @@
 ## Description
 Front-end application built with React.js and third party API (New York Times Bestselling Books Lists)<br>
 
-### Deployed Site
+### Deployed Site 
 <img src="current-bestsellers/assets/homepage.png" alt="homepage" > 
 
-Visit the deployed site at
+#### Visit the deployed site at
 https://current-bestsellers.surge.sh/
 
 ### Overview
