@@ -3,6 +3,8 @@
 ## Description
 Front-end application built with React.js and third party API (New York Times Bestselling Books Lists). Visit the deployed site at https://current-bestsellers.surge.sh/<br>
 
+<br>
+
 <img src="current-bestsellers/assets/homepage.png" alt="homepage" > 
 
 ### Overview
@@ -37,13 +39,13 @@ This project was built using the following technologies, libraries & frameworks:
 ## Credits & Acknowledgements
 The following resources were invaluable at different points in my project:<br>
 <br>
-* [Flexbox Nav Menu with Animation](https://codepen.io/mycarrera/pen/GpKwxO)<br>
-<br>
-* [Flexbox Footer](https://dev.to/akshay_rajput/keep-footer-at-bottom-of-page-using-flexbox-4a6f)<br>
-<br>
-* [Responsive Carousel](https://reactjsexample.com/react-responsive-carousel-component-with-grid-layout-to-easily-create-a-carousel-like-photo-gallery/)<br>
-<br>
-* [React Router useParams()](https://medium.com/geekculture/how-to-use-react-router-useparams-436851fd5ef6) & the [video](https://www.youtube.com/watch?v=BLbTGKUzND4) linked at the bottom of the article<br>
+* [Flexbox Nav Menu with Animation](https://codepen.io/mycarrera/pen/GpKwxO)
+
+* [Flexbox Footer](https://dev.to/akshay_rajput/keep-footer-at-bottom-of-page-using-flexbox-4a6f)
+
+* [Responsive Carousel](https://reactjsexample.com/react-responsive-carousel-component-with-grid-layout-to-easily-create-a-carousel-like-photo-gallery/)
+
+* [React Router useParams()](https://medium.com/geekculture/how-to-use-react-router-useparams-436851fd5ef6) & the [video](https://www.youtube.com/watch?v=BLbTGKUzND4) linked at the bottom of the article
 
 ## Use & Contribution
 To make use of this repository you may `fork` and `clone` it. Then, in your terminal make a new directory using the command `mkdir react-app`. Open the new directory and use the command `git clone` followed by the copied `clone` link. 
