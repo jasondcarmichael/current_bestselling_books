@@ -4,6 +4,9 @@
 Front-end application built with React.js and third party API (New York Times Bestselling Books Lists)<br>
 
 ### Deployed Site
+![homepage](current-bestsellers/assets/homepage.png)
+
+Visit the deployed site at
 https://current-bestsellers.surge.sh/
 
 ### Overview
@@ -28,6 +31,7 @@ This project was built using the following technologies, libraries & frameworks:
   - Links and Routes
 * Axios Library
 * VS Code and Terminal
+* Surge
 * Favicons
 * Google Fonts
   - Jost (sans serif)
