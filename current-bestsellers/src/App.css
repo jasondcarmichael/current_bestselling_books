@@ -55,14 +55,9 @@ p {
   font-size: 18px;
 }
 
-/* .author {
-  font-family: 'Jost', sans-serif;
-} */
-
 .ranking {
   font-family: 'Jost', sans-serif;
   color: lightslategray;
-
 }
 
 .book-container {
@@ -80,8 +75,6 @@ p {
   height: 450px;
   width: 300px;
 }
-
-
 
 .carousel-container {
   /* margin-top: 5%; */
@@ -179,8 +172,6 @@ h5 {
   text-decoration: none;
   color: blue;
   font-size: 14px;
-  /* position: absolute; */
-  /* bottom: 0; */
 }
 
 .view-details:hover {

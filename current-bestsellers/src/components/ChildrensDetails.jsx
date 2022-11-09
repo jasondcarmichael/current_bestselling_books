@@ -10,7 +10,6 @@ export default function ChildrensDetails (props) {
 
     const [book, setBook] = useState([])
 
-
     useEffect(() => {
         let selectedBook = props.pictureBooks.find(
          (book) => book.primary_isbn13 === isbn13
@@ -19,7 +18,6 @@ export default function ChildrensDetails (props) {
         console.log(setBook)
     }, [book, isbn13])
 
-    
     return book ? (
         <div className="detail">
           <div className="detail-header">
@@ -27,20 +25,27 @@ export default function ChildrensDetails (props) {
           </div>
 
           <div className="info-wrapper">
-            <h1><em>{book.title}</em></h1>
-            <h3>{book.contributor}</h3>
-            <p>Ranked #{book.rank} this week</p>
-            <p><b>Summary:</b> {book.description}</p>
+            <h3 className="detail-description">Ranked # {book.rank} on this week's bestsellers list is {book.author}'s latest book <em>{book.title}</em>. Last week, it was ranked # {book.rank_last_week} and has been on the list for {book.weeks_on_list} weeks straight.</h3>
+
+            <h5>CONTRIBUTOR</h5>
+            <p className="details">{book.contributor_note}</p>
+
+            <h5>SUMMARY</h5>
+            <p className="details">{book.description}</p>
         
             <div className="pub-info">
-              <p><b>Rank Last Week:</b> {book.rank_last_week} </p>
-              <p><b>Weeks on the List:</b> {book.weeks_on_list} </p>
-              <p><b>Published by:</b> {book.publisher}</p>
-              <p><b>ISBN #:</b> {book.primary_isbn13}</p>
+              <h5 >PUBLISHER</h5>
+              <p className="details">{book.publisher}</p>
+
+              <h5>ISBN #</h5>
+              <p className="details">{book.primary_isbn13}</p>
+              
+              <h5>CURIOUS?</h5>
+              <p className="details">Visit Amazon to purchase, read reviews, and learn more about  <a href={book.amazon_product_url} target="_blank" title={book.amazon_product_url}>{book.title}</a></p>
+
               <Link to="/childrensbooks" className="back-btn"> ◁ Back to Books </Link>
               </div>
           </div>
         </div>
     ) : null;
-
 }
