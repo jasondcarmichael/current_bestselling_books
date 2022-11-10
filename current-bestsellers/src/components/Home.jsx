@@ -1,5 +1,4 @@
 import Carousel from 'better-react-carousel'
-import { useEffect, useState } from 'react'
 
 export default function Home (props) {
 
@@ -86,7 +85,6 @@ export default function Home (props) {
 
             </Carousel>
             </div>
-
     ) : null;
 }
 

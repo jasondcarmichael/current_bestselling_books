@@ -28,7 +28,6 @@ export default function Books (props) {
                         </div>      
                     ))
                 }
-                
                 </div>
             </div>
         )     

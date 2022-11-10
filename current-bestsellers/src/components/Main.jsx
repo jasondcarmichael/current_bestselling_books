@@ -10,7 +10,6 @@ import NonfictionDetails from './NonfictionDetails'
 import ChildrensBooks from './ChildrensBooks'
 import ChildrensDetails from './ChildrensDetails'
 
-
 export default function Main () {
 
     const [books, setBooks] = useState([])
@@ -18,40 +17,35 @@ export default function Main () {
     useEffect(()=> {
         const getData = async () => {
             const response = await axios.get(`${BASE_URL}/lists/current/hardcover-fiction.json?api-key=${process.env.REACT_APP_NYT_KEY}`)
-            console.log(response.data.results.books)
             setBooks(response.data.results.books)
         }
         getData()
     }, [])
-    console.log(books)
 
     const [nonfiction, setNonfiction] = useState([])
 
     useEffect(()=> {
         const getData = async () => {
             const response = await axios.get(`${BASE_URL}/lists/current/hardcover-nonfiction.json?api-key=${process.env.REACT_APP_NYT_KEY}`)
-            console.log(response.data.results.books)
             setNonfiction(response.data.results.books)
         }
         getData()
     }, [])
-    console.log(nonfiction)
 
     const [pictureBooks, setPictureBooks] = useState([])
 
     useEffect(()=> {
         const getData = async () => {
             const response = await axios.get(`${BASE_URL}/lists/current/picture-books.json?api-key=${process.env.REACT_APP_NYT_KEY}`)
-            console.log(response.data.results.books)
             setPictureBooks(response.data.results.books)
         }
         getData()
     }, [])
-    console.log(pictureBooks)
    
     return (
         <div>
             <Routes>
+
                 <Route path="/" element={<Home books={books}
                                                 nonfiction={nonfiction}
                                                 pictureBooks={pictureBooks}
@@ -63,11 +57,7 @@ export default function Main () {
                 <Route path="/childrensbooks" element={<ChildrensBooks pictureBooks={pictureBooks}/>} />
                 <Route path="/childrensbooks/:isbn13" element={<ChildrensDetails pictureBooks={pictureBooks}/>} />
         
-
-
             </Routes>
-
-
         </div>
     )
 }

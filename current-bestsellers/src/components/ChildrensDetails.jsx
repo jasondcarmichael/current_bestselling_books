@@ -3,10 +3,8 @@ import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 
 export default function ChildrensDetails (props) {
-    console.log(props)
 
     let { isbn13 } = useParams()
-    console.log(isbn13)
 
     const [book, setBook] = useState([])
 
@@ -15,7 +13,6 @@ export default function ChildrensDetails (props) {
          (book) => book.primary_isbn13 === isbn13
          ) 
         setBook(selectedBook)
-        console.log(setBook)
     }, [book, isbn13])
 
     return book ? (

@@ -18,9 +18,9 @@ export default function ChildrensBooks (props) {
             
                 <div className="book-container">
                 
-                {
-                    props.pictureBooks.map((book, index) => (
-                        <div className="book-card" onClick={() => showPictureBooks (book)} key={index}>
+                    {
+                        props.pictureBooks.map((book, index) => (
+                            <div className="book-card" onClick={() => showPictureBooks (book)} key={index}>
 
                             <h4 className="ranking">Ranked #{book.rank} this week </h4>
 
@@ -32,10 +32,9 @@ export default function ChildrensBooks (props) {
                             
                             <p className="view-details"> View details ▻ </p>
                         
-                        </div>    
-                    ))
-                }
-                
+                            </div>    
+                        ))
+                    }
                 </div>
             </div>
         )     

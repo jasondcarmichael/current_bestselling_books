@@ -2,7 +2,7 @@ export default function Footer () {
 
     return (
         <div>
-            <h4> © 2022 JDC </h4>
+            <h4> © JDC 2022</h4>
         </div>
     )
 }

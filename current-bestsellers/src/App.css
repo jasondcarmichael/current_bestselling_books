@@ -4,7 +4,6 @@
   min-height: 100vh;
   text-align: center;
   font-family: 'Cormorant', serif;
-  
 }
 
 .App-header {
@@ -77,7 +76,6 @@ p {
 }
 
 .carousel-container {
-  /* margin-top: 5%; */
   display: flex;
   justify-content: center;
   align-content: center;
@@ -133,7 +131,6 @@ p {
 .info-wrapper {
   text-align: left;
   padding-right: 30px;
- 
 }
 
 .detail-description {
@@ -153,7 +150,6 @@ p {
 .back-btn:hover {
   text-decoration: underline;
 }
-
 
 h5 {
   padding-bottom: 0px;
